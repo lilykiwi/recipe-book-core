@@ -3,7 +3,6 @@
 
 #{{recipe-name}} found in header
 #{{recipe-path}} found in header, more specificity (relates to file)
-#{{category}     found in markdown header. relates to Breakfast, Lunch, Dinner
 
 #{{recipe-ingredients}} speaks for itself, inside a <li></li> block
 #{{recipe-steps}}       speaks for itself, inside a <li></li> block
@@ -15,11 +14,10 @@
 # - Interpret variables as described above
 # - Load html template files and modify them (replace text)
 # - Produce engine for pagination
-# - Produce engine for producing recipe cards on category page (snippet in file)
-# - Produce engine for limiting 15 recipe cards to a category page
+# - Produce engine for producing recipe cards on homepage (snippet in file)
+# - Produce engine for limiting 15 recipe cards to each page
 # - Produce engine for listing steps and ingredients with proper <li> tags
 # - Make sure all link references work properly
-# - Add images to category.html for the three cards
 # - Done?
 
 from os import listdir
