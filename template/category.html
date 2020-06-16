@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/litera/bootstrap.min.css"
+    />
+
+    <!-- FA icons -->
+    <script
+      src="https://kit.fontawesome.com/975e7152bd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <style>
+      .card-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+      .card-link {
+        color: #343a40;
+      }
+      .card-link:hover {
+        color: #343a40;
+      }
+      .card-highlight {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.3rem;
+      }
+      .card-highlight:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      .navbar-brand i {
+        display: inline-block;
+        margin: 0 10px;
+        width: 20px;
+      }
+      .card-image {
+        width: 100%;
+        height: 200px;
+        display: block;
+        object-fit: cover;
+        background-color: var(--primary);
+        border-radius: 0.3rem 0.3rem 0 0;
+      }
+    </style>
+
+    <title>Aioli - Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-apple-alt navbar-brand"></i>
+        Aioli
+      </a>
+    </nav>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+      <li class="breadcrumb-item active"><a>{{category}}</a></li>
+    </ol>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Aioli</h1>
+        <h2>{{category}}.</h2>
+      </div>
+
+      <div class="row">
+        <!--
+
+          Max 15 recipes per page
+
+<div class="col-lg-4">
+  <a href="{{recipe-path}}.html" class="card-link">
+    <div class="card mb-3">
+      <div class="card-highlight"></div>
+      <img class="card-image" src="img/{{recipe-path}}.png" alt="Card image" />
+      <h4 class="card-header">{{recipe-name}}</h4>
+    </div>
+  </a>
+</div>
+
+        -->
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="recipe.html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <h4 class="card-header">Placeholder</h4>
+              <img
+                class="card-image"
+                style="width: 100%; display: block;"
+                src="placeholder.png"
+                alt="Card image"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+      <!---->
+    </div>
+
+    <div>
+      <ul class="pagination pagination-sm justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#">&laquo;</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">4</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">5</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">&raquo;</a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="jumbotron"
+      style="margin-top: 1rem; margin-bottom: 0; padding: 2rem 2rem;"
+    >
+      <div class="container">
+        <div class="text-muted">Aioli - Produced by Lyla (summerysaturn)</div>
+      </div>
+    </div>
+  </body>
+</html>
