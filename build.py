@@ -21,13 +21,16 @@
 from os import listdir, unlink
 from os.path import isfile, islink, join
 from shutil import copy2, rmtree
-import sys, math
+import sys, math, os, shutil
 
 
 def get_contents(filename):
     with open("./recipe/" + filename) as f:
         return f.readlines()
 
+
+if not os.path.exists("build"):
+    os.makedirs("build")
 
 for f in listdir("build"):
     path = join("build", f)
