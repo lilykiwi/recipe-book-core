@@ -58,7 +58,7 @@
     }
   </style>
 
-  <title>Aioli - Home - Page [page-num]</title>
+  <title>Aioli - Home - Page 1</title>
 </head>
 
 <body>
@@ -74,7 +74,7 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h2>Page [page-num]</h2>
+      <h2>Page 1</h2>
     </div>
 
     <div class="row">
@@ -96,7 +96,18 @@
 
       -->
 
-      <!--Add cards here!-->
+      
+        <div class="col-lg-4">
+        <a href="instant-ramen.html" class="card-link">
+            <div class="card mb-3">
+            <div class="card-highlight"></div>
+            <img class="card-image" src="../img/instant-ramen.jpg" alt="Instant Ramen" />
+            <h4 class="card-header">Instant Ramen</h4>
+            </div>
+        </a>
+        </div>
+        <!--Add cards here!-->
+        
     </div>
     <!---->
   </div>
@@ -105,16 +116,16 @@
     <!--
       Before you comment, yes this isn't how pagination works. My reasoning for doing it this way is that I -really- don't want to mess with mixing python and complex HTML. So while this could be better implemented, for example with javascript, it's out of scope for this project.
 
-      Also fun that .[is-left-disabled] is now technically valid for CSS.
+      Also fun that .disabled is now technically valid for CSS.
     -->
     <ul class="pagination pagination-sm justify-content-center">
-      <li class="page-item [is-left-disabled]">
+      <li class="page-item disabled">
         <a class="page-link" href="[page-left]">&laquo;</a>
       </li>
       <li class="page-item disabled">
-        <a class="page-link" href="#">Page [page-num]</a>
+        <a class="page-link" href="#">Page 1</a>
       </li>
-      <li class="page-item [is-right-disabled]">
+      <li class="page-item disabled">
         <a class="page-link" href="[page-right]">&raquo;</a>
       </li>
     </ul>
