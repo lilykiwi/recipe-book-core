@@ -1,3 +1,3 @@
-# recipe-book
+# recipe-book-core
 
 My book of simple college/uni recipes.

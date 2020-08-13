@@ -1,3 +1,3 @@
-# recipe-book
+# recipe-book-core
 
 A tool for creating a static site out of markdown-format recipes.
