@@ -1,23 +1,6 @@
 #!/usr/bin/python3
 # encoding: utf-8
 
-#{{recipe-name}} found in header
-#{{recipe-path}} found in header, more specificity (relates to file)
-
-#{{recipe-ingredients}} speaks for itself, inside a <li></li> block
-#{{recipe-steps}}       speaks for itself, inside a <li></li> block
-
-# TODO
-# Need to
-# - Store all recipes before building? Dictionary?
-# - Load html template files and modify them (replace text)
-# - Produce engine for pagination
-# - Produce engine for producing recipe cards Son homepage (snippet in file)
-# - Produce engine for limiting 15 recipe cards to each page
-# - Produce engine for listing steps and ingredients with proper <li> tags
-# - Make sure all link references work properly
-# - Done?
-
 from os import listdir, unlink
 from os.path import isfile, islink, join
 from shutil import copy2, rmtree
