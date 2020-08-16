@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 # encoding: utf-8
 
-from os import listdir, unlink
-from os.path import isfile, islink, join
-from shutil import copy2, rmtree
 import sys, math, os, shutil
 
 
@@ -15,15 +12,20 @@ def get_contents(filename):
 if not os.path.exists("build"):
     os.makedirs("build")
 
-for f in listdir("build"):
-    path = join("build", f)
+for f in os.listdir("build"):
+    path = os.path.join("build", f)
     try:
-        if isfile(path):
-            unlink(path)
+        if os.path.isfile(path):
+            os.remove(path)
+        else:
+            shutil.rmtree(path)
     except Exception as e:
         print("Failed to clear build dir. %s" % (path, e))
 
-recipes = [f for f in listdir("recipe") if isfile(join("recipe", f))]
+recipes = [
+    f for f in os.listdir("recipe")
+    if os.path.isfile(os.path.join("recipe", f))
+]
 
 if (len(recipes) < 1):
     print("No recipes found in ./recipe")
@@ -70,7 +72,7 @@ for i in range(0, len(recipes)):
         print("This isn't a valid recipe!")
         continue  # skip over this file and continue
 
-    copy2("./template/recipe.html", "./build/" + filename + ".html")
+    shutil.copy2("./template/recipe.html", "./build/" + filename + ".html")
 
     pageNumber = math.floor(i / 15) + 1
 
@@ -103,9 +105,9 @@ for i in range(0, len(recipes)):
 
     #----------------------handling for homepage
 
-    if not isfile("./build/home" + str(pageNumber) + ".html"):
-        copy2("./template/home.html",
-              "./build/home" + str(pageNumber) + ".html")
+    if not os.path.isfile("./build/home" + str(pageNumber) + ".html"):
+        shutil.copy2("./template/home.html",
+                     "./build/home" + str(pageNumber) + ".html")
 
     with open("./build/home" + str(pageNumber) + ".html", "r+") as f:
         raw = f.read()
@@ -115,7 +117,7 @@ for i in range(0, len(recipes)):
         <a href="[recipe-path].html" class="card-link">
             <div class="card mb-3">
             <div class="card-highlight"></div>
-            <img class="card-image" src="../img/[recipe-path].jpg" alt="[recipe-name]" />
+            <img class="card-image" src="img/[recipe-path].jpg" alt="[recipe-name]" />
             <h4 class="card-header">[recipe-name]</h4>
             </div>
         </a>
@@ -160,5 +162,13 @@ for i in range(1, totalPages + 1):  #+1 to both sides for ease
         f.seek(0)
         f.write(raw)
         f.truncate()
+
+    #------------------------ copy images to build folder
+
+    os.makedirs("build/img")
+
+    for f in os.listdir("img"):
+        path = os.path.join("img", f)
+        shutil.copy2(path, "./build/img/")
 
 print("Done!")
