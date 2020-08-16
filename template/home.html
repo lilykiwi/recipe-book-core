@@ -58,74 +58,96 @@
       background-color: var(--primary);
       border-radius: 0.3rem 0.3rem 0 0;
     }
+
+    .page-container {
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .content-wrap {
+      padding-bottom: 5.5rem;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 5.5rem;
+      background-color: #e9ecef;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      padding: 2rem 2rem;
+    }
   </style>
 
   <title>Aioli - Home - Page [page-num]</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand">
-      <i class="fas fa-apple-alt navbar-brand"></i>
-      Aioli
-    </a>
-  </nav>
+  <div class="page-container">
+    <div class="content-wrap">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand">
+          <i class="fas fa-apple-alt navbar-brand"></i>
+          Aioli
+        </a>
+      </nav>
 
-  <br>
+      <br>
 
-  <div class="container">
+      <div class="container">
 
-    <div class="jumbotron">
-      <h2>Page [page-num]</h2>
-    </div>
+        <div class="jumbotron">
+          <h2>Page [page-num]</h2>
+        </div>
 
-    <div class="row">
-      <!--
+        <div class="row">
+          <!--
 
         Max 15 recipes per page
 
         Card Template:
 
-      <div class="col-lg-4">
-        <a href="[recipe-path].html" class="card-link">
-          <div class="card mb-3">
-            <div class="card-highlight"></div>
-            <img class="card-image" src="img/[recipe-path].png" alt="[recipe-name]" />
-            <h4 class="card-header">[recipe-name]</h4>
-          </div>
-        </a>
+        <div class="col-lg-4">
+          <a href="[recipe-path].html" class="card-link">
+            <div class="card mb-3">
+              <div class="card-highlight"></div>
+              <img class="card-image" src="img/[recipe-path].png" alt="[recipe-name]" />
+              <h4 class="card-header">[recipe-name]</h4>
+            </div>
+          </a>
+        </div>
+
+        -->
+
+          <!--Add cards here!-->
+          <!--<div style="height: 200vh"></div>-->
+        </div>
       </div>
 
-      -->
-
-      <!--Add cards here!-->
-    </div>
-    <!---->
-  </div>
-
-  <div>
-    <!--
+      <div>
+        <!--
       Before you comment, yes this isn't how pagination works. My reasoning for doing it this way is that I -really- don't want to mess with mixing python and complex HTML. So while this could be better implemented, for example with javascript, it's out of scope for this project.
 
       Also fun that .[is-left-disabled] is now technically valid for CSS.
-    -->
-    <ul class="pagination pagination justify-content-center">
-      <li class="page-item [is-left-disabled]">
-        <a class="page-link" href="[page-left]">&laquo;</a>
-      </li>
-      <li class="page-item disabled">
-        <a class="page-link" href="#">Page [page-num]</a>
-      </li>
-      <li class="page-item [is-right-disabled]">
-        <a class="page-link" href="[page-right]">&raquo;</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="jumbotron"
-    style="margin-top: 1rem; margin-bottom: 0; padding: 2rem 2rem;">
-    <div class="container">
-      <div class="text-muted">Aioli | developed by summerysaturn</div>
+      -->
+        <ul class="pagination pagination justify-content-center">
+          <li class="page-item [is-left-disabled]">
+            <a class="page-link" href="[page-left]">&laquo;</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Page [page-num]</a>
+          </li>
+          <li class="page-item [is-right-disabled]">
+            <a class="page-link" href="[page-right]">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="text-muted">Aioli | developed by summerysaturn</div>
+      </div>
     </div>
   </div>
 </body>
