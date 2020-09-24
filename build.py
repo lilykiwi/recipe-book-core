@@ -165,10 +165,6 @@ for i in range(1, totalPages + 1):  #+1 to both sides for ease
 
     #------------------------ copy images to build folder
 
-    os.makedirs("build/img")
-
-    for f in os.listdir("img"):
-        path = os.path.join("img", f)
-        shutil.copy2(path, "./build/img/")
+    shutil.copytree("./img", "./build/img")
 
 print("Done!")
